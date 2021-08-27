@@ -9,10 +9,10 @@ int main()
 	int acc[9] = {8 ,16,24,32,40,48,56,64,80} ;
 	int mxlnth ;
 	int arr[9];
-	int ans = 0 ;
+	int ans = 1 ;
 	while( cin >> mxlnth )
 	{
-		ans = 0 ;
+		ans = 1 ;
 		for (int x = 0 ; x < 9 ; x++)
 			cin >> arr[x] ;
 		int left = mxlnth ;
@@ -25,7 +25,7 @@ int main()
 			}
 			while(arr[x] != 0) 
 			{
-				if(left > acc[x])
+				if(left >= acc[x])
 				{
 					left -= acc[x] ; --arr[x] ;
 				}
